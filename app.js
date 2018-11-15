@@ -16,6 +16,8 @@ app.get("/", (req, res) => {
   res.send("Hello from root route.")
 })
 
-app.listen(3002, () => {
-  console.log("Server is up and listening on port 3003...");
+const PORT = process.env.PORT || 3002
+
+app.listen(PORT, () => {
+  console.log("Server is up and listening on: " + PORT);
 })
